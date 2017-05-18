@@ -1,0 +1,15 @@
+import cv2
+
+videoCapture = cv2.VideoCapture('test.mp4')
+success, frame = videoCapture.read()
+delay=30
+# ch = 0xFF
+
+while success :
+    cv2.imshow("Oto Video", frame) #显示
+
+    # a=cv2.waitKey(delay)
+    ch = 0xFF & cv2.waitKey(delay)
+    if ch == ord(' '):
+        cv2.waitKey() 
+    success, frame = videoCapture.read()
