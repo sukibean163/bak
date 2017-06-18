@@ -1,0 +1,48 @@
+easypr
+
+i=0
+while [[ $i -lt $NUM_WORKERS ]]
+do
+  i=$(($i + 1))
+done
+
+deconvolutional_kernels
+yolo_kernels
+not use
+
+change
+emergency
+flow
+quick
+notway
+overspeed
+retro
+
+{('notway', 'night'): [100, [76, 45, 3, 33, 32, 70, 8, 54, 48, 5, 66, 86]]}
+
+
+
+all=`find . -maxdepth 4 -mindepth 4 -type d`; for i in $all; do mv $i $(echo $i | awk -F '/' '{print $2"_"$5}');
+done
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
+
+73051187
+
+-DCMAKE_PREFIX_PATH
+DCMAKE_INSTALL_PREFIX
+
+export CC=/usr/local/bin/gcc
+export CXX=/usr/local/bin/g++
+
+
+
+
+LD_PRELOAD=libc-2.14.so ln -sf libc-2.14.so libc.so.6
+
+
+python /d/test_code/python/tfrecord/tf_img/build_image_data_ori.py --train_shards=4 --validation_shards=4 --num_threads=4
+
+
+ffmpeg -y -i abc.mp4 -ss 900.00 -t 10.00 -vcodec copy -acodec copy test.mp4
