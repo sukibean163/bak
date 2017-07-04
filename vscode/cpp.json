@@ -1,0 +1,130 @@
+{
+    "usi": {
+        "prefix": "usi",
+        "body": [
+            "using namespace $std;"
+        ],
+        "description": "using namespace"
+    },
+    "define class": {
+        "prefix": "dc",
+        "body": [
+            "class $classname",
+            "{",
+            "public:",
+            "",
+            "~$classname() { instance = nullptr; }",
+            "",
+            "static $classname* Get() ",
+            "{",
+            "if (instance == nullptr)",
+            "instance = new $classname;",
+            "return instance;",
+            "}",
+            "private:",
+            "static $classname* instance;",
+            "};"
+        ],
+        "description": "define class"
+    },
+    "define param": {
+        "prefix": "dp",
+        "body": [
+            "#ifdef Param",
+            "#undef Param",
+            "#endif",
+            "#define Param(Type, T, Default) \\",
+            "Type get_##T(){return T();}",
+            "#include \"common_def.h\""
+        ],
+        "description": "define param"
+    },
+    "pragma once": {
+        "prefix": "po ",
+        "body": [
+            "#pragma once"
+        ],
+        "description": "pragma once"
+    },
+    "coment function ": {
+        "prefix": "cfunc",
+        "body": [
+            "/*!",
+            " \\brief    $brief",
+            " \\param   $param_name $param_use",
+            " \\return     ",
+            " */"
+        ],
+        "description": "coment function "
+    },
+    "coment file ": {
+        "prefix": "cfile",
+        "body": [
+            "/*!",
+            " \\file    $file",
+            " \\brief    $brief",
+            "",
+            "$file",
+            "",
+            " \\version     1.0.0",
+            " \\author     sukibean",
+            " \\date     $date",
+            " */"
+        ],
+        "description": "coment class "
+    },
+
+    "coment class ": {
+        "prefix": "cc",
+        "body": [
+            "/*!",
+            " \\class    $class",
+            " \\brief    $brief",
+            "",
+            "$class",
+            "",
+            " \\version     1.0.0",
+            " \\author     sukibean",
+            " \\date     $date",
+            " */"
+        ],
+        "description": "coment class "
+    },
+    "coment struct ": {
+        "prefix": "cs",
+        "body": [
+            "/*!",
+            " \\struct    $struct",
+            " \\brief    $brief",
+            "",
+            "$struct",
+            "",
+            " \\version     1.0.0",
+            " \\author     sukibean",
+            " \\date     $date",
+            " */"
+        ],
+        "description": "coment struct "
+    },
+    "cout << << endl": {
+        "prefix": "cend",
+        "body": [
+            "cout << $1 << endl;"
+        ],
+        "description": "cout << << endl"
+    },
+    "log info": {
+        "prefix": "logi",
+        "body": [
+            "LOG(INFO) << $1;"
+        ],
+        "description": "log info"
+    },
+    "log warn": {
+        "prefix": "logw",
+        "body": [
+            "LOG(WARN) << $1;"
+        ],
+        "description": "log warn"
+    }
+}
